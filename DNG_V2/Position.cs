@@ -2,6 +2,19 @@
 {
     public class Position
     {
+        protected bool Equals(Position other)
+        {
+            return X == other.X && Y == other.Y;
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                return (X * 397) ^ Y;
+            }
+        }
+
         public static Position North = new Position(0, -1);
         public static Position South = new Position(0, 1);
         public static Position East = new Position(1, 0);
@@ -13,8 +26,8 @@
         public Position E { get { return this + East; } }
         public Position W { get { return this + West; } }
 
-        public int X;
-        public int Y;
+        public readonly int X;
+        public readonly int Y;
 
         public Position(int x, int y)
         {
@@ -30,6 +43,14 @@
         public static Position operator *(Position a, int b)
         {
             return new Position(a.X * b, a.Y * b);
+        }
+
+        public override bool Equals(System.Object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != GetType()) return false;
+            return Equals((Position)obj);
         }
 
         public override string ToString()

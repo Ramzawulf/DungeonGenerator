@@ -30,25 +30,25 @@ namespace DNG_V2
         {
             var result = new Dictionary<Position, TileType>();
 
-            foreach (KeyValuePair<Position, TileType> keyValuePair in NorthWall.GetPositions())
-            {
-                result.Add(keyValuePair.Key, keyValuePair.Value);
-            }
+            //foreach (KeyValuePair<Position, TileType> keyValuePair in NorthWall.GetPositions())
+            //{
+            //    result.Add(keyValuePair.Key, keyValuePair.Value);
+            //}
 
-            foreach (KeyValuePair<Position, TileType> keyValuePair in SouthWall.GetPositions())
-            {
-                result.Add(keyValuePair.Key, keyValuePair.Value);
-            }
+            //foreach (KeyValuePair<Position, TileType> keyValuePair in SouthWall.GetPositions())
+            //{
+            //    result.Add(keyValuePair.Key, keyValuePair.Value);
+            //}
 
-            foreach (KeyValuePair<Position, TileType> keyValuePair in EastWall.GetPositions())
-            {
-                result.Add(keyValuePair.Key, keyValuePair.Value);
-            }
+            //foreach (KeyValuePair<Position, TileType> keyValuePair in EastWall.GetPositions())
+            //{
+            //    result.Add(keyValuePair.Key, keyValuePair.Value);
+            //}
 
-            foreach (KeyValuePair<Position, TileType> keyValuePair in WestWall.GetPositions())
-            {
-                result.Add(keyValuePair.Key, keyValuePair.Value);
-            }
+            //foreach (KeyValuePair<Position, TileType> keyValuePair in WestWall.GetPositions())
+            //{
+            //    result.Add(keyValuePair.Key, keyValuePair.Value);
+            //}
 
             for (var y = 0; y < Height; y++)
             {

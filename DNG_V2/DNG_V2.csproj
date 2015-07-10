@@ -60,7 +60,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room.cs" />
-    <Compile Include="RNGHelper.cs" />
+    <Compile Include="DMHelper.cs" />
     <Compile Include="Tile.cs" />
     <Compile Include="TileType.cs" />
     <Compile Include="Trail.cs" />

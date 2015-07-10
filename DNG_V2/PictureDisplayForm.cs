@@ -11,16 +11,18 @@ namespace DNG_V2
             var b = new Bitmap(500, 500);
             var DM = new DungeonMaster(500, 500);
             DM.Build();
+            var e = DM.Export();
 
-            foreach (var kv in DM.UsedPoints)
+            for (int y = 0; y < DM.Height; y++)
             {
-                var c = kv.Value == TileType.Floor ? Color.Beige : kv.Value == TileType.Wall ? Color.Black : Color.White;
-                b.SetPixel(kv.Key.X, kv.Key.Y, c);
+                for (int x = 0; x < DM.Width; x++)
+                {
+                    var c = e[x, y] == TileType.Floor ? Color.White : Color.Black;
+                    b.SetPixel(x, y, c);
+                }
             }
 
             Canvas.Image = Image.FromHbitmap(b.GetHbitmap());
-
-
         }
     }
 }

@@ -53,11 +53,11 @@ namespace DNG_V2
             if (Direction == Direction.North)
                 rStartPosition = Trail.Last().Position + new Position(-w / 2, -h);
             else if (Direction == Direction.South)
-                rStartPosition = Trail.Last().Position + new Position(w / 2, h);
+                rStartPosition = Trail.Last().Position + new Position(-w / 2, 1);
             else if (Direction == Direction.East)
                 rStartPosition = Trail.Last().Position + new Position(1, -h / 2);
             else
-                rStartPosition = Trail.Last().Position + new Position(-1, -h / 2);
+                rStartPosition = Trail.Last().Position + new Position(-w, -h / 2);
 
             var r = new Room(rStartPosition, w, h);
             ConnectedFeatureB = r;
